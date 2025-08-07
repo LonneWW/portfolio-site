@@ -1,0 +1,18 @@
+.projects-list-container {
+  box-sizing: border-box;
+  width: 800px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .projects-list-container {
+    width: 100%;
+  }
+}

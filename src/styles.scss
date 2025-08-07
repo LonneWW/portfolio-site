@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use "@angular/material" as mat;
+@use "./theme/palettes_theme-colors.scss" as palettes;
+
+/* Color Palette */
+$background-color: #0f0f0f;
+$text-color: #bcbcbc;
+$accent-color: #00a97f;
+$color: #ff0000;
+
+html {
+  & {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    @include mat.theme(
+      (
+        color: palettes.$primary-palette,
+        typography: (
+          brand-family: Fjalla One,
+          plain-family: Poppins,
+        ),
+        density: 0,
+        theme: light,
+      )
+    );
+    p,
+    span,
+    a {
+      font-family: Poppins;
+      // color: var(--mat-sys-on-background);
+    }
+    a {
+      color: var(--mat-sys-on-surface-variant);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Fjalla One;
+      color: var(--mat-sys-on-surface);
+    }
+    // .icon {
+    //   color: var(--mat-sys-inverse-on-surface);
+    // }
+    &.dark {
+      @include mat.theme(
+        (
+          color: palettes.$tertiary-palette,
+          theme: dark,
+        )
+      );
+    }
+  }
+
+  body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 100%;
+    // background-color: $background-color;
+    /*provvisorio*/
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    h2 {
+      margin: 10px 0;
+    }
+    //PROVVISORIO!
+    transition: background-color 1s ease-in-out;
+  }
+}
+
+/*Global styles*/
+
+/*Classes*/
+
+/*Tags*/
+a {
+  text-decoration: none;
+}
+
+/*Responsive styles*/
+@media only screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+}

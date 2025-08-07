@@ -1,0 +1,54 @@
+<div class="objectives-container">
+  <h2>What I wish to work on in the future</h2>
+  <div class="objectives-table">
+    <div class="to-do">
+      <h3>To-do:</h3>
+      <ul class="objectives-list">
+        <li *ngFor="let objective of objectivesToDo">
+          <a
+            class="link"
+            [href]="objective.url ? objective.url : ''"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            >{{ objective.label }}
+            <mat-icon class="icon">arrow_outward</mat-icon></a
+          >
+        </li>
+        <li *ngIf="objectivesToDo.length < 1" class="no-objectives">
+          I don't think this message will ever appear...
+        </li>
+      </ul>
+    </div>
+    <div class="done">
+      <h3>Done:</h3>
+      <ul class="objectives-list">
+        <li *ngFor="let objective of objectivesDone">
+          <a
+            class="link"
+            [href]="objective.url ? objective.url : ''"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            >{{ objective.label
+            }}<mat-icon class="icon">arrow_outward</mat-icon></a
+          >
+        </li>
+        <li *ngIf="objectivesDone.length < 1" class="no-objectives">
+          In progress<span class="dots"
+            ><span class="dot">.</span><span class="dot">.</span
+            ><span class="dot">.</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="disclaimer">
+    Disclaimer: I assume no responsibility for the total or partial completion
+    of the objectives listed above. Since I know myself, I know that setting too
+    ambitious goals would end up having the opposite result. Thus I'm not going
+    to make promises that I'm not sure I can keep. :P
+  </p>
+  <p class="suggestions">
+    I'm always up to learn new things. If you have any suggestions feel free to
+    contact me; it would be very helpful!
+  </p>
+</div>

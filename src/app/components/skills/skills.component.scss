@@ -1,0 +1,36 @@
+.skills-container {
+  box-sizing: border-box;
+  width: 800px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  .tech-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-inline-start: 0px;
+    padding: 0.5rem;
+    margin: 16px auto 0 auto;
+    li {
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease-out;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      > * {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .skills-container {
+    width: 100%;
+    .tech-list {
+      padding-inline-start: 10px;
+      gap: 10px;
+    }
+  }
+}

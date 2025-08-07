@@ -1,0 +1,28 @@
+<div class="skills-container">
+  <h2>What I work with</h2>
+  <ul class="tech-list">
+    <li *ngFor="let icon of expTechIcons">
+      <mat-icon
+        [svgIcon]="icon.slug"
+        [style.color]="
+          icon.hex ? '#' + icon.hex : 'var(--mat-sys-on-surface-variant)'
+        "
+        >></mat-icon
+      >
+      <span>{{ icon.title }}</span>
+    </li>
+  </ul>
+  <h2>Other technologies I've been using</h2>
+  <ul class="tech-list">
+    <li *ngFor="let icon of usedTechIcons">
+      <mat-icon
+        [svgIcon]="icon.slug"
+        [style.color]="
+          icon.hex ? '#' + icon.hex : 'var(--mat-sys-on-surface-variant)'
+        "
+      >
+      </mat-icon>
+      <span>{{ icon.title }}</span>
+    </li>
+  </ul>
+</div>

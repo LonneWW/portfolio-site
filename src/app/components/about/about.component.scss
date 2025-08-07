@@ -1,0 +1,91 @@
+@use "@angular/material" as mat;
+
+.profile-img {
+  img {
+    border-radius: 50%;
+  }
+}
+
+.profile-info {
+  > * {
+    margin-top: 10px;
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 100px;
+  gap: 50px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  > * {
+    margin: 0 15px;
+  }
+  :first-child {
+    margin-left: 0;
+  }
+}
+
+.icon-btn {
+  // color: #bcbcbc;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  .icon {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+    &:hover {
+      transform-origin: center;
+      transform: scale(1.3);
+    }
+  }
+}
+.icon {
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    &.git {
+      color: var(--mat-sys-on-surface);
+    }
+    &.in {
+      color: #0a66c2;
+    }
+    &.mail {
+      color: #ea4335;
+    }
+    &.location {
+      color: #eb001b;
+    }
+  }
+}
+
+.cv-btn {
+  @include mat.button-overrides(
+    (
+      outlined-label-text-color: var(--mat-sys-on-background),
+    )
+  );
+}
+
+p,
+span,
+h1,
+h2 {
+  margin: 0;
+}
+// &:hover { da metteere all'immagine del profilo?
+//   transform-origin: center;
+//   transform: scale(1.2) rotate(-10deg);
+//   transition: transform 0.2s ease-in-out;
+// }

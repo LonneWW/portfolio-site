@@ -1,0 +1,70 @@
+@use "@angular/material" as mat;
+@use "sass:color";
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+.project-card {
+  width: 350px;
+  height: 500px;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  // background-color: #0f0f0f;
+  border: 1px solid #bcbcbc;
+  > * {
+    width: 300px;
+  }
+  img {
+    height: 200px;
+    width: 300px;
+    object-fit: scale-down;
+  }
+  .description {
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: "none";
+    overflow: hidden;
+    hyphens: auto;
+  }
+  .tech-chips {
+    max-height: 80px;
+    overflow-y: scroll;
+  }
+  //.tech-chips {
+  // @include mat.chips-overrides(
+  //   (
+  //     label-text-color: #bcbcbc,
+  //   )
+  // );
+  //}
+}
+
+mat-card-header {
+  padding: 0;
+}
+
+.actions {
+  padding: 0;
+  .action-chip {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 5px 8px;
+    border: 1px solid grey;
+    // background-color: #e4e4e4;
+    border-radius: 8px;
+    // color: #0f0f0f;
+    mat-icon {
+      // color: #0f0f0f;
+      margin-left: 5px;
+    }
+    // &:hover {
+    //   background-color: color.scale($color: #e4e4e4, $lightness: -15%);
+    // }
+  }
+}

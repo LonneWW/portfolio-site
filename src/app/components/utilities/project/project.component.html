@@ -1,0 +1,32 @@
+<mat-card class="project-card">
+  <img
+    mat-card-image
+    [ngSrc]="data.imageUrl"
+    width="300"
+    height="200"
+    alt="{{ data.title }}"
+  />
+  <mat-card-header>
+    <mat-card-title>{{ data.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p [title]="data.description" class="description">{{ data.description }}</p>
+    <mat-chip-set class="tech-chips">
+      <mat-chip *ngFor="let chip of data.techChipList">
+        <!-- <mat-icon>{{ chip.icon }}</mat-icon> -->
+        {{ chip.text }}</mat-chip
+      >
+    </mat-chip-set>
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <a
+      *ngFor="let source of data.sourcesList"
+      [href]="source.link"
+      target="_blank"
+      class="action-chip"
+    >
+      {{ source.text }}
+      <mat-icon>open_in_new</mat-icon>
+    </a>
+  </mat-card-actions>
+</mat-card>
