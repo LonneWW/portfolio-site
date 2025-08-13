@@ -1,12 +1,15 @@
 <div class="about-container">
   <div class="profile-info">
-    <p>Hi, I'm Samuel</p>
+    <p>{{ `about.presentation` | translate }}</p>
     <h1 class="text-accent">Junior Full Stack Developer</h1>
-    <p><mat-icon class="icon location">location_on</mat-icon> Lecco, Italy</p>
+    <p>
+      <mat-icon class="icon location">location_on</mat-icon
+      >{{ "about.location" | translate }}
+    </p>
     <div class="contacts">
-      <button mat-stroked-button title="Resume" class="cv-btn">
-        <a href="" target="_blank">Download CV</a>
-      </button>
+      <a title="Resume" [href]="'about.cv_url' | translate" target="_blank">
+        <button mat-stroked-button class="cv-btn">Download CV</button>
+      </a>
       <button class="icon-btn" title="Github">
         <a
           href="https://github.com/LonneWW"
@@ -39,10 +42,11 @@
   <div class="profile-img">
     <img
       mat-card-image
-      ngSrc="assets/foto_transp-bg.png"
+      ngSrc="assets/img/foto_transp-bg.png"
       width="250"
       height="250"
       alt="Profile image"
+      priority
     />
   </div>
 </div>

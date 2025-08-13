@@ -1,0 +1,84 @@
+{
+  "test": "ciaoaoaoao",
+  "navbar": {
+    "about": "About",
+    "skills": "Lavori",
+    "projects": "Progetti",
+    "objectives": "Obiettivi"
+  },
+  "about": {
+    "presentation": "Ciao, sono Samuel",
+    "location": "Lecco, Italia",
+    "cv_url": "assets/docs/CV_it.pdf"
+  },
+  "skills": {
+    "expListTitle": "Con cosa lavoro",
+    "usedListTitle": "Altre tecnologie che ho utilizzato"
+  },
+  "projects": {
+    "title": "Alcuni progetti a cui ho lavorato",
+    "projectsList": [
+    {
+      "title": "Tech News",
+      "imageUrl": "assets/img/tech-news-preview.png",
+      "description":"Questo progetto è l'esame pratico del corso Javascript Advanced della start2impact University. Il compito era quello di creare un'applicazione web per democratizzare la diffusione delle informazioni nel campo tecnologico attraverso l'uso del servizio API Hacker News.",
+      "techChipList": [
+        { "text": "html" },
+        { "text": "css" },
+        { "text": "sass" },
+        { "text": "javascript" },
+        { "text": "webpack" },
+        { "text": "dotenv" },
+        { "text": "netlify" }
+      ],
+      "sourcesList": [
+        { "text": "Website", "link": "https://lonneww-technews.netlify.app/" },
+        { "text": "Source Code", "link": "https://github.com/LonneWW/technews/" }
+      ]
+    },
+    {
+      "title": "Our Urbs",
+      "imageUrl": "assets/img/our-urbs-preview.png",
+      "description": "Questo progetto è uno degli esami pratici del corso Angular della start2impact University. L'obiettivo era creare un'app mockup utilizzando il servizio GoRest API. La mia è un'app di tipo social, pensata per chi vuole condividere idee e resoconti per migliorare la vita nei centri urbani.",
+      "techChipList": [
+        { "text": "html" },
+        { "text": "sass" },
+        { "text": "typescript" },
+        { "text": "angular" },
+        { "text": "angular material" },
+        { "text": "netlify" }
+      ],
+      "sourcesList": [
+        { "text": "Website", "link": "https://our-urbs.netlify.app/" },
+        { "text": "Source Code", "link": "https://github.com/LonneWW/our-urbs/" }
+      ]
+    },
+    {
+      "title": "Your Space",
+      "imageUrl": "assets/img/your-space-preview.png",
+      "description":
+        "Questo è il progetto finale per il master in sviluppo full stack presso la start2impact University. L'obiettivo era sviluppare un'applicazione web mockup per un'ipotetica azienda cliente. Ho scelto di sviluppare una piattaforma per scrivere e condividere appunti per un'azienda che offre psicoterapia.",
+      "techChipList": [
+        { "text": "angular" },
+        { "text": "angular material" },
+        { "text": "sass" },
+        { "text": "quill" },
+        { "text": "nodejs" },
+        { "text": "mysql" },
+        { "text": "netlify" },
+        { "text": "render" },
+        { "text": "railway" }
+      ],
+      "sourcesList": [
+        { "text": "Website", "link": "https://your-space-fe.onrender.com/" },
+        { "text": "Source Code (FE)", "link": "https://github.com/LonneWW/your-space" },
+        { "text": "Source Code (BE)", "link": "https://github.com/LonneWW/your-space-be" }
+      ]
+    }
+  ]
+  },
+  "objectives": {
+    "title": "Su cosa vorrei lavorare in futuro",
+    "suggestionReq": "Sono sempre alla ricerca di nuove competenze da apprendere. Se vi piacerebbe darmi qualche suggerimento non esitate a contattarmi!"
+  }
+}

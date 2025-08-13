@@ -13,7 +13,6 @@
     <p [title]="data.description" class="description">{{ data.description }}</p>
     <mat-chip-set class="tech-chips">
       <mat-chip *ngFor="let chip of data.techChipList">
-        <!-- <mat-icon>{{ chip.icon }}</mat-icon> -->
         {{ chip.text }}</mat-chip
       >
     </mat-chip-set>
@@ -25,8 +24,10 @@
       target="_blank"
       class="action-chip"
     >
-      {{ source.text }}
-      <mat-icon>open_in_new</mat-icon>
+      <button mat-button>
+        {{ source.text }}
+        <mat-icon>open_in_new</mat-icon>
+      </button>
     </a>
   </mat-card-actions>
 </mat-card>

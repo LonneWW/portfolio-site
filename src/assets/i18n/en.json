@@ -1,0 +1,84 @@
+{
+  "test": "heilà",
+  "navbar": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "objectives": "Objectives"
+  },
+  "about": {
+    "presentation": "Hi, I'm Samuel",
+    "location": "Lecco, Italy",
+    "cv_url": "assets/docs/CV_en.pdf"
+  },
+  "skills": {
+    "expListTitle": "What I work with",
+    "usedListTitle": "Other technologies I've been using"
+  },
+  "projects": {
+    "title": "Some projects I've worked on",
+    "projectsList": [
+    {
+      "title": "Tech News",
+      "imageUrl": "assets/img/tech-news-preview.png",
+      "description":"This project is the pratical exam of the Javascript Advanced start2impact University's course. The task was to create a web application to democratize the spread of information in the tech field through the use of the Hacker News API service.",
+      "techChipList": [
+        { "text": "html" },
+        { "text": "css" },
+        { "text": "sass" },
+        { "text": "javascript" },
+        { "text": "webpack" },
+        { "text": "dotenv" },
+        { "text": "netlify" }
+      ],
+      "sourcesList": [
+        { "text": "Website", "link": "https://lonneww-technews.netlify.app/" },
+        { "text": "Source Code", "link": "https://github.com/LonneWW/technews/" }
+      ]
+    },
+    {
+      "title": "Our Urbs",
+      "imageUrl": "assets/img/our-urbs-preview.png",
+      "description": "This project is one of the practical exams of the Angular start2impact University's course. The task was to create a fake app using the GoREST API service. Mine is a social-like app, for people who want to share ideas and reports to improve life in urban centres.",
+      "techChipList": [
+        { "text": "html" },
+        { "text": "sass" },
+        { "text": "typescript" },
+        { "text": "angular" },
+        { "text": "angular material" },
+        { "text": "netlify" }
+      ],
+      "sourcesList": [
+        { "text": "Website", "link": "https://our-urbs.netlify.app/" },
+        { "text": "Source Code", "link": "https://github.com/LonneWW/our-urbs/" }
+      ]
+    },
+    {
+      "title": "Your Space",
+      "imageUrl": "assets/img/your-space-preview.png",
+      "description":
+        "This is the final project for the master in full stack development at start2impact University. The delivery was to develop a mockup web app for a hypothetical client company. I chose to develop a platform for writing and sharing notes for a company that offers psychotherapy.",
+      "techChipList": [
+        { "text": "angular" },
+        { "text": "angular material" },
+        { "text": "sass" },
+        { "text": "quill" },
+        { "text": "nodejs" },
+        { "text": "mysql" },
+        { "text": "netlify" },
+        { "text": "render" },
+        { "text": "railway" }
+      ],
+      "sourcesList": [
+        { "text": "Website", "link": "https://your-space-fe.onrender.com/" },
+        { "text": "Source Code (FE)", "link": "https://github.com/LonneWW/your-space" },
+        { "text": "Source Code (BE)", "link": "https://github.com/LonneWW/your-space-be" }
+      ]
+    }
+  ]
+  },
+  "objectives": {
+    "title": "What I wish to work on in the future",
+    "suggestionReq": "I am always looking for new skills to learn. If you would like to give me some suggestions do not hesitate to contact me!"
+  }
+}

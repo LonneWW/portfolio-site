@@ -113,6 +113,22 @@
   .suggestions {
     width: 100%;
   }
+  .objectives-table {
+    flex-direction: column;
+    .done {
+      .objectives-list {
+        border-left: unset !important;
+        min-height: 300px !important;
+      }
+    }
+    .to-do,
+    .done {
+      .objectives-list {
+        border: 1px solid grey !important;
+        border-radius: 5px !important;
+      }
+    }
+  }
 }
 
 @keyframes fall-first {

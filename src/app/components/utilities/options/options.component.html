@@ -1,8 +1,8 @@
 <div class="options">
   <button mat-icon-button class="theme-btn" (click)="changeTheme()">
-    <mat-icon class="icon">light_mode</mat-icon>
+    <mat-icon class="icon">{{ theme }}</mat-icon>
   </button>
-  <button mat-icon-button class="leng-btn">
+  <button mat-icon-button class="leng-btn" (click)="changeLang()">
     <mat-icon class="icon">language</mat-icon>
   </button>
 </div>
