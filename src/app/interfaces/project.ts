@@ -13,5 +13,4 @@ interface source {
 
 interface projectChip {
   text: string;
-  icon?: string;
 }

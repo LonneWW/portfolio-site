@@ -1,19 +1,18 @@
 .objectives-container {
-  box-sizing: border-box;
-  width: 800px;
-  margin: 0 auto;
   padding: 0.5rem;
+  //the table is the container of both "to-do" and "done" "cells"
   .objectives-table {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     padding: 0.5rem;
     h3 {
       margin-bottom: 0;
     }
+    //these are the styles for each "cell"
     .to-do,
     .done {
-      flex: 1 1 48%;
       display: flex;
       flex-direction: column;
       .objectives-list {
@@ -23,32 +22,42 @@
         padding-inline-start: 0;
         padding: 1em 0.5em;
         flex: 1;
-        min-height: 0;
+        min-height: 300px;
         display: flex;
         flex-direction: column;
         align-items: stretch;
         justify-content: center;
+        border: 1px solid grey;
+        border-radius: 5px;
+        //the list items represtent the subjects
         li {
           margin: 5px 0;
           padding: 2px 4px;
+          //each item contains an anchor tag with the source of the subject
           .link {
             display: flex;
             align-items: center;
-            transition: all 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+            //the span represents the text...
+            span {
+              max-width: 85%;
+            }
+            //while the .icon class the icon
             .icon {
-              transition: all 0.2s ease-in-out;
+              transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
               margin-left: 20px;
               opacity: 0;
             }
+            //on hover underline the text and show the icon
             &:hover {
               text-decoration: underline;
-              // text-decoration: underline #bcbcbc;
               .icon {
                 opacity: 1;
               }
             }
           }
         }
+        //in case a list of objectives is empty, show a text with a "pending" animation
         .no-objectives {
           font-size: 1.3rem;
           font-weight: bold;
@@ -61,89 +70,70 @@
               display: inline-block;
               transform: translateY(-0.3em);
               transform-origin: center;
-              animation-fill-mode: both;
-            }
-            .dot:nth-child(1) {
-              animation: fall-first 2s infinite ease-in-out;
-            }
-            .dot:nth-child(2) {
-              animation: fall-second 2s infinite ease-in-out;
-            }
-            .dot:nth-child(3) {
-              animation: fall-third 2s infinite ease-in-out;
+              &:nth-child(1) {
+                animation: fall-first 2s infinite ease-in-out;
+              }
+              &:nth-child(2) {
+                animation: fall-second 2s infinite ease-in-out;
+              }
+              &:nth-child(3) {
+                animation: fall-third 2s infinite ease-in-out;
+              }
             }
           }
         }
       }
     }
-    .to-do {
-      .objectives-list {
-        border: 1px solid grey;
-        border-radius: 5px 0 0 5px;
-      }
-    }
-    .done {
-      .objectives-list {
-        border: 1px solid grey;
-        border-left: none;
-        border-radius: 0 5px 5px 0;
-      }
-    }
   }
-}
-
-.disclaimer {
-  width: 800px;
-  margin: 0 auto;
-  font-size: xx-small;
-  font-weight: 300;
-  font-style: italic;
-  // color: rgba(188, 188, 188, 0.1);
-  opacity: 0.2;
 }
 
 .suggestions {
-  width: 800px;
   margin: 0 auto;
+  padding: 0.5em;
 }
 
-@media only screen and (max-width: 1024px) {
-  .objectives-container,
-  .disclaimer,
-  .suggestions {
-    width: 100%;
-  }
-  .objectives-table {
-    flex-direction: column;
-    .done {
-      .objectives-list {
-        border-left: unset !important;
-        min-height: 300px !important;
+/*Responsive styles*/
+@media (min-width: 1025px) {
+  .objectives-container {
+    .objectives-table {
+      flex-direction: row;
+      .to-do,
+      .done {
+        flex: 1 1 48%;
+        .objectives-list {
+          min-height: 0;
+        }
+      }
+      .to-do {
+        .objectives-list {
+          border-radius: 5px 0 0 5px;
+        }
+      }
+      .done {
+        .objectives-list {
+          border-left: none;
+          border-radius: 0 5px 5px 0;
+        }
       }
     }
-    .to-do,
-    .done {
-      .objectives-list {
-        border: 1px solid grey !important;
-        border-radius: 5px !important;
-      }
+    .disclaimer {
+      width: 800px;
     }
   }
 }
 
+//dots animations (to syncronize the animation on vanish, needed to make 3 different ones)
 @keyframes fall-first {
   0%,
   12.5% {
     opacity: 0;
     transform: translateY(-0.3em);
   }
-
   25%,
   80% {
     opacity: 1;
     transform: translateY(0);
   }
-
   88%,
   100% {
     opacity: 0;
@@ -157,32 +147,29 @@
     opacity: 0;
     transform: translateY(-0.3em);
   }
-
   37.5%,
   80% {
     opacity: 1;
     transform: translateY(0);
   }
-
   88%,
   100% {
     opacity: 0;
     transform: translateY(0);
   }
 }
+
 @keyframes fall-third {
   0%,
   12.5% {
     opacity: 0;
     transform: translateY(-0.3em);
   }
-
   50%,
   80% {
     opacity: 1;
     transform: translateY(0);
   }
-
   88%,
   100% {
     opacity: 0;

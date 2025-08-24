@@ -4,6 +4,7 @@
     <app-project
       *ngFor="let project of projectsArray"
       [data]="project"
+      (open)="openDialog($event)"
     ></app-project>
   </div>
 </div>

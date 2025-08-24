@@ -16,6 +16,7 @@ export class SkillsComponent implements OnInit {
   constructor(private iconsService: IconsService) {}
 
   ngOnInit() {
+    //on init, populates the icons arrays using the iconsService
     this.usedTechIcons = this.iconsService.getAllUsed() as IconMeta[];
     this.expTechIcons = this.iconsService.getAllExp() as IconMeta[];
   }

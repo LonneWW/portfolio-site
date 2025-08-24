@@ -10,7 +10,7 @@
             [href]="objective.url ? objective.url : ''"
             rel="noopener noreferrer nofollow"
             target="_blank"
-            >{{ objective.label }}
+            ><span>{{ objective.label }}</span>
             <mat-icon class="icon">arrow_outward</mat-icon></a
           >
         </li>
@@ -28,8 +28,8 @@
             [href]="objective.url ? objective.url : ''"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            >{{ objective.label
-            }}<mat-icon class="icon">arrow_outward</mat-icon></a
+            ><span>{{ objective.label }}</span
+            ><mat-icon class="icon">arrow_outward</mat-icon></a
           >
         </li>
         <li *ngIf="objectivesDone.length < 1" class="no-objectives">

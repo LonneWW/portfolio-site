@@ -1,18 +1,5 @@
 @use "@angular/material" as mat;
 
-.profile-img {
-  img {
-    border-radius: 50%;
-    box-shadow: inset 0px -5px 8px var(--mat-sys-outline-variant);
-  }
-}
-
-.profile-info {
-  > * {
-    margin-top: 10px;
-  }
-}
-
 .about-container {
   display: flex;
   flex-direction: column;
@@ -20,25 +7,46 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  //added padding top to not be covered by the navbar
   padding-top: 100px;
   gap: 50px;
+  p,
+  span,
+  h1,
+  h2 {
+    margin: 0;
+  }
+  .profile-img {
+    img {
+      border-radius: 50%;
+      box-shadow: inset 0px -5px 8px var(--mat-sys-outline-variant);
+    }
+  }
+  .profile-info {
+    > * {
+      margin-top: 10px;
+    }
+    .contacts {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0.5rem;
+      > * {
+        margin: 0 15px;
+      }
+      :first-child {
+        margin-left: 0;
+      }
+      //since the @ icon is inserted via google fonts, it needs this property to be correctly alligned
+      .mail {
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
-.contacts {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0.5rem;
-  > * {
-    margin: 0 15px;
-  }
-  :first-child {
-    margin-left: 0;
-  }
-}
-
+//styles made for the icon buttons
 .icon-btn {
-  // color: #bcbcbc;
   background-color: transparent;
   border: none;
   width: 40px;
@@ -53,11 +61,13 @@
     }
   }
 }
+
+//these styles give a specific hover color based on the other class of the element
 .icon {
   transition: transform 0.2s ease-in-out;
   &:hover {
     &.git {
-      color: var(--mat-sys-on-surface);
+      color: light-dark(#000000, #ffffff);
     }
     &.in {
       color: #0a66c2;
@@ -78,15 +88,3 @@
     )
   );
 }
-
-p,
-span,
-h1,
-h2 {
-  margin: 0;
-}
-// &:hover { da metteere all'immagine del profilo?
-//   transform-origin: center;
-//   transform: scale(1.2) rotate(-10deg);
-//   transition: transform 0.2s ease-in-out;
-// }

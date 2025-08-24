@@ -1,11 +1,18 @@
 .options {
   .theme-btn {
     width: 40px;
-    margin-right: 20px;
-    // color: #bcbcbc;
+    margin-right: auto;
   }
   .leng-btn {
     width: 40px;
-    // color: #bcbcbc;
+  }
+}
+
+/*Responsive styles*/
+@media only screen and (min-width: 550px) {
+  .options {
+    .theme-btn {
+      margin-right: 20px;
+    }
   }
 }

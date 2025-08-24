@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+  <img
+    [src]="data.imageUrl"
+    alt="{{ data.title }}"
+    style="width: 100%; max-height: 400px; object-fit: cover"
+  />
+  <p>{{ data.description }}</p>
+
+  <mat-chip-set>
+    <mat-chip *ngFor="let chip of data.techChipList">{{ chip.text }}</mat-chip>
+  </mat-chip-set>
+  <div class="actions">
+    <a
+      *ngFor="let source of data.sourcesList"
+      [href]="source.link"
+      target="_blank"
+      class="action-chip"
+    >
+      <button mat-button>
+        {{ source.text }}
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

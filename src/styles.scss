@@ -24,28 +24,6 @@ html {
         theme: light,
       )
     );
-    p,
-    span,
-    a,
-    li {
-      font-family: Poppins;
-      // color: var(--mat-sys-on-background);
-    }
-    a {
-      color: var(--mat-sys-on-surface-variant);
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: Fjalla One;
-      color: var(--mat-sys-on-surface);
-    }
-    // .icon {
-    //   color: var(--mat-sys-inverse-on-surface);
-    // }
     &.dark {
       @include mat.theme(
         (
@@ -54,33 +32,39 @@ html {
         )
       );
     }
-  }
-
-  body {
-    margin: 0 auto;
-    box-sizing: border-box;
-    height: 100%;
-    // background-color: $background-color;
-    /*provvisorio*/
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
+    body {
+      margin: 0 auto;
+      box-sizing: border-box;
+      height: 100%;
+      p,
+      span,
+      a,
+      li {
+        font-family: Poppins;
+      }
+      a {
+        color: var(--mat-sys-on-surface-variant);
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: Fjalla One;
+        color: var(--mat-sys-on-surface);
+      }
+      /*provvisorio*/
+      h1 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+      h2 {
+        margin: 10px 0;
+      }
     }
-    h2 {
-      margin: 10px 0;
-    }
-    //PROVVISORIO!
-    transition: background-color 1s ease-in-out;
   }
-}
-
-/*Global styles*/
-
-/*Classes*/
-
-/*Tags*/
-a {
-  text-decoration: none;
 }
 
 /*Responsive styles*/

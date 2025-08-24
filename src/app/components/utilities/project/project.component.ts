@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../interfaces/project';
 import { MatCardModule } from '@angular/material/card';
@@ -21,6 +21,8 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class ProjectComponent {
   @Input() data!: Project;
-
-  public open: boolean = false;
+  @Output() open = new EventEmitter();
+  openCard() {
+    this.open.emit(this.data);
+  }
 }

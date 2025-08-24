@@ -47,6 +47,7 @@ export class AppComponent implements OnInit {
     iconsService: IconsService,
     public translate: TranslateService
   ) {
+    //list of simple-icons
     const expTechIcons: any[] = [
       siHtml5,
       siSass,
@@ -58,6 +59,8 @@ export class AppComponent implements OnInit {
       siMysql,
       siGithub,
     ];
+
+    //list of simple-icons
     const usedTechIcons: any[] = [
       siBootstrap,
       siPhp,
@@ -66,35 +69,40 @@ export class AppComponent implements OnInit {
       siRender,
       siRailway,
     ];
+
     iconRegistry.addSvgIcon(
       'linkedin',
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/linkedin.svg')
     );
+
     iconRegistry.addSvgIcon(
       'github',
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/github.svg')
     );
 
+    //register all the icons of the array to make them accessible in the app
     expTechIcons.forEach((icon) => {
       iconRegistry.addSvgIconLiteral(
         icon.slug,
         sanitizer.bypassSecurityTrustHtml(icon.svg)
       );
-
+      //the first parameter represents whether the icon is part of the exp array or not
       iconsService.registerIcon(true, icon);
     });
 
+    //register all the icons of the array to make them accessible in the app
     usedTechIcons.forEach((icon) => {
       iconRegistry.addSvgIconLiteral(
         icon.slug,
         sanitizer.bypassSecurityTrustHtml(icon.svg)
       );
-
+      //the first parameter represents whether the icon is part of the exp array or not
       iconsService.registerIcon(false, icon);
     });
   }
 
   ngOnInit(): void {
+    //checks if there
     const storageLang = localStorage.getItem('lang') ?? 'it';
     const storageTheme = localStorage.getItem('theme');
     if ((storageTheme && storageTheme == 'dark') || storageTheme == 'light') {

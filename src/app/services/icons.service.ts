@@ -13,7 +13,7 @@ export class IconsService {
   private usedTechIcons: IconMeta[] = [];
   private expTechIcons: IconMeta[] = [];
 
-  /** usato dal registry module per popolare la lista */
+  //method used to populate the usedTechIcons array, used by the method registerIcon
   registerUsedIcon(icon: SimpleIcon) {
     this.usedTechIcons.push({
       slug: icon.slug,
@@ -21,7 +21,7 @@ export class IconsService {
       hex: icon.hex,
     });
   }
-
+  //method used to populate the expTechIcons array, used by the method registerIcon
   registerExpIcon(icon: SimpleIcon) {
     this.expTechIcons.push({
       slug: icon.slug,
@@ -30,6 +30,7 @@ export class IconsService {
     });
   }
 
+  //method used to override the hex property of some simple-icons and call the correct function to register the icon
   registerIcon(exp: boolean, icon: SimpleIcon) {
     const iconToOverride = ['github', 'angular', 'render', 'railway'];
     if (iconToOverride.includes(icon.slug)) {
@@ -38,7 +39,7 @@ export class IconsService {
     exp ? this.registerExpIcon(icon) : this.registerUsedIcon(icon);
   }
 
-  /** recupera l’elenco completo */
+  //methods to obtain the array of icons
   getAllExp(): ReadonlyArray<IconMeta> {
     return this.expTechIcons;
   }

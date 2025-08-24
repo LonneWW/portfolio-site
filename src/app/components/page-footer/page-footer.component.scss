@@ -1,8 +1,4 @@
-.footer-container {
-  box-sizing: border-box;
-  width: 800px;
-  margin: 0 auto;
-}
+@use "@angular/material" as mat;
 
 .contacts {
   display: flex;
@@ -15,10 +11,12 @@
   :first-child {
     margin-left: 0;
   }
+  .mail {
+    vertical-align: middle;
+  }
 }
 
 .icon-btn {
-  // color: #bcbcbc;
   background-color: transparent;
   border: none;
   width: 30px;
@@ -27,15 +25,12 @@
     font-size: 25px;
     width: 25px;
     height: 25px;
+    //taking the color variable from the theme
+    color: var(--mat-sys-on-surface-variant);
     transition: transform 0.2s ease-in-out;
-    // &:hover {
-    //   color: white;
-    // }
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .footer-container {
-    width: 100%;
+    &:hover {
+      //color selected to best highlight the contrast
+      color: light-dark(#000000, #ffffff);
+    }
   }
 }

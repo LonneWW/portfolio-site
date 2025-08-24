@@ -1,29 +1,35 @@
+/* Stili base: mobile */
 .navbar {
+  //padding right to match the inline one of the links list
+  padding-right: 15px;
+  left: 0;
   position: fixed;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
   padding: 15px 0;
   background-color: rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(2px);
+  //container used to divide the content of the navbar from its background
   .navigations-container {
-    width: 800px;
+    width: inherit;
     display: flex;
     align-items: center;
     ul {
       display: flex;
       justify-content: space-between;
       list-style: none;
-      padding-inline-start: 0px;
+      padding-inline-start: 10px;
+      gap: 10px;
       margin-right: auto;
+      //list items represents the sections of the page
       li {
-        min-width: 100px;
-        // a:hover {
-        //    color: white;
-        // }
+        min-width: unset;
+        a:focus-visible {
+          outline: none;
+        }
         a:hover {
           font-weight: bold;
         }
@@ -32,17 +38,18 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+/*Responsive styles*/
+@media (min-width: 1025px) {
   .navbar {
-    padding-right: 15px;
-    left: 0;
+    padding-right: 0;
+    left: auto;
     .navigations-container {
-      width: inherit;
+      width: 800px;
       ul {
-        padding-inline-start: 10px;
-        gap: 10px;
+        padding-inline-start: 0;
+        gap: unset;
         li {
-          min-width: unset;
+          min-width: 100px;
         }
       }
     }
